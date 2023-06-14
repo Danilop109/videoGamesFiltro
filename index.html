@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>GamesSoft</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/styles.css">
+
+</head>
+
+<body>
+    <!---------------------------------- NAVEGACION -------------------------------------->
+    <div class="container-fluid game">
+        <div class="row">
+            <nav class="navbar navbar-expand-lg fixed-top">
+                <div class="container">
+                    <a href="index.html" class="navbar-brand fs-3" style="color:aliceblue"><span
+                            class="text-warning fs-1">GAMES</span>soft</a>
+                    <button class="navbar-toggler" tye="button" data-bs-toggle="collapse" data-bs-target="#navbarS"
+                        aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarS">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a href="#clientes" class="nav-link">Gestion de clientes</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#games" class="nav-link">Gestion Video juegos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#compra" class="nav-link">Compra Video Juegos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#fidelizacion" class="nav-link">Fidelizacion</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <h1 style="margin-top: 250px; text-align: center; color: rgb(216, 219, 221);">Let's start</h1>
+        <h2 style="text-align: center; color: rgb(255, 174, 0);">Your favorites games</h2>
+
+    </div>
+
+
+    <!---------------------------------- Gestion Clientes -------------------------------------->
+
+    <div class="row">
+        <a name="clientes"></a>
+        <h2 style="text-align: center; background: rgb(12, 12, 12); color:aliceblue; padding: 10px">Gestion Clientes
+        </h2>
+        <div class="col m-2">
+            <form action="" method="get" id="formClientes">
+                <div class="container">
+                    <div class="row ">
+                        <div class="col-12 p-4">
+                            <div class="mb-3">
+                                <label for="identidad" class="form-label">Numero de identificacion: </label>
+                                <input type="number" name="identidad" id="identidad" class="form-control"
+                                    placeholder="Numero..." required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="nombre" class="form-label">Nombre: </label>
+                                <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Nombre"
+                                    required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="apellido" class="form-label">Apellidos: </label>
+                                <input type="text" name="apellido" id="apellido" class="form-control"
+                                    placeholder="Apellido" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="telefono" class="col-form-label">Teléfono:</label>
+                                <input type="number" name="telefono" id="telefono" class="form-control"
+                                    placeholder="Numero telefonico" title="Campo obligatorio" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="email" class="col-form-label">Correo: </label>
+                                <input type="email" name="email" id="email" class="form-control"
+                                    placeholder="Correo electronico" title="Campo obligatorio" title="Email incorrecto"
+                                    pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$"
+                                    required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="fecha" class="col-form-label">Fecha de nacimiento: </label>
+                                <input type="date" name="fecha" id="fecha" class="form-control" placeholder="Fecha"
+                                    title="Campo obligatorio" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="nacion" class="col-form-label">Nacionalidad: </label>
+                                <input type="text" name="nacion" id="nacion" class="form-control"
+                                    placeholder="Nacionalidad" title="Campo obligatorio"
+                                    pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
+                            </div>
+
+                            <br>
+                            <div class="mb-3">
+                                <button type="button" class="btn btn-primary" style="width: 150px;"
+                                    id="enviarCliente">Enviar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+        <div class="col">
+
+            <div class="row p-1 m-1">
+                <div class="col">
+                    <input type="search" name="search" id="buscarCliente" placeholder="Busca...">
+                    <div class="table-responsive">
+                        <table class="table table-dark" id="cabezaTabla">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Lista Ingreso</th>
+                                    <th scope="col">Identificacion</th>
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col">Apellido</th>
+                                    <th scope="col">Telefono</th>
+                                    <th scope="col">Correo</th>
+                                    <th scope="col">Fecha Nacimiento</th>
+                                    <th scope="col">Nacionalidad</th>
+                                    <th scope="col">Editar</th>
+                                    <th scope="col">Elimina</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tablaClientes">
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!---------------------------------- Gestion Games -------------------------------------->
+
+    <div class="row">
+        <a name="games"></a>
+        <h2 style="text-align: center; background: rgb(12, 12, 12); color:aliceblue; padding: 10px">Gestion Video Juegos
+        </h2>
+        <div class="col m-2">
+            <form action="" method="get" id="formGames">
+                <div class="container">
+                    <div class="row ">
+                        <div class="col-12 p-4">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Nombre del vide juego: </label>
+                                <input type="text" name="name" id="name" class="form-control" placeholder="Nombre"
+                                    required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="tema" class="form-label">Tematica: </label>
+                                <select class="form-select" aria-label="Default select example" id="tema">
+                                    <option selected>Elige tema</option>
+                                    <option value="1">Aventura</option>
+                                    <option value="2">Ciencia Ficcion</option>
+                                    <option value="3">Fantasia</option>
+                                    <option value="4">Terror</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="valor" class="col-form-label">Valor de la licencia:</label>
+                                <input type="number" name="valor" id="valor" class="form-control"
+                                    placeholder="Valor licencia" title="Campo obligatorio" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="puntuacion" class="form-label">Puntuacion fidelización: </label>
+                                <select class="form-select" aria-label="Default select example" id="puntuacion">
+                                    <option selected>Elige puntuacion</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+
+                            <br>
+                            <div class="mb-3">
+                                <button type="button" class="btn btn-danger" style="width: 150px;"
+                                    id="enviaGame">Enviar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+        <div class="col">
+            <div class="row p-1 m-1">
+                <div class="col">
+                    <div class="table-responsive">
+                        <table class="table table-dark" id="cabezaTabla">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col">Tematica</th>
+                                    <th scope="col">Valor</th>
+                                    <th scope="col">Puntuacion</th>
+                                    <th scope="col">Elimina</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tablaGame">
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!---------------------------------- Compra Games -------------------------------------->
+
+    <div class="row">
+        <a name="compra"></a>
+        <h2 style="text-align: center; background: rgb(12, 12, 12); color:aliceblue; padding: 10px">Compras Video Juegos
+        </h2>
+        <div class="col">
+            <form action="" method="get" id="formCompra">
+                <div class="container">
+                    <div class="row ">
+                        <div class="col-12 p-4">
+                            <div class="mb-3">
+                                <label for="selecName" class="form-label">Selecciona Persona: </label>
+                                <select class="form-select" aria-label="Default select example" id="selecName">
+                                    <option selected>Elige tu nombre</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="selecGame" class="form-label">Selecciona Juego: </label>
+                                <select class="form-select" aria-label="Default select example" id="selecGame">
+                                    <option selected>Elige el juego</option>
+                                </select>
+                            </div>
+                            <br>
+                            <div class="mb-3">
+                                <button type="button" class="btn btn-warning" style="width: 150px;"
+                                    id="compraJuego">Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col">
+            <div id="cartas">
+
+            </div>
+
+        </div>
+    </div>
+
+    <!---------------------------------- FIDELIZACION -------------------------------------->
+    <div class="row">
+        <a name="fidelizacion"></a>
+        <h2 style="text-align: center; background: rgb(12, 12, 12); color:aliceblue; padding: 10px">Fidelizacion</h2>
+        <div class="mb-3">
+            <button type="button" class="btn btn-success" id="muestra">Puntos de cada cliente</button>
+        </div>
+    
+            <div class="col">
+                <div class="row p-1 m-1">
+                    <div class="col">
+                        <div class="container">
+                            <div class="table-responsive">
+                                <table class="table table-success" id="cabezaTabla">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Identidad</th>
+                                            <th scope="col">Nombre</th>
+                                            <th scope="col">Apellido</th>
+                                            <th scope="col">Puntos</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="clientesPuntos">
+        
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        
+    
+                    </div>
+                </div>
+            </div>
+
+        
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="./js/clientes.js"></script>
+    <script src="./js/games.js"></script>
+    <script src="./js/compra.js"></script>
+    <script src="./js/fidelizacion.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>

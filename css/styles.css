@@ -1,0 +1,67 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(0, 0, 0);
+}
+.game {
+    height: 650px;
+    background-color: rgb(3, 3, 3);
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+    background-position: center;
+
+}
+
+nav{
+    background-color: rgba(0, 0, 0, 0.699);
+}
+.nav-link{
+    color: rgb(240, 234, 234);
+    font-size: 17px;
+}
+.nav-link:hover{
+    color: rgb(255, 174, 0);
+}
+
+#buscarCliente{
+    padding: 3px;
+    margin: 5px;
+    border: solid 2px rgb(255, 153, 0);
+    border-radius: 5px;
+}
+form{
+    border-radius: 20px;
+    color: black;
+    font-size: 17px;
+}
+#formClientes{
+    background-color: rgba(46, 83, 138, 0.603);
+    color: aliceblue;
+}
+
+#formGames{
+    background-image: url(../img/roger-ce-anyVvX7zL48-unsplash.jpg);
+    opacity: 0.9;
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+#formCompra{
+    background-color: aliceblue;
+    color: rgba(248, 145, 11, 0.993);
+}
+
+#muestra{
+    width: 300px;
+    padding: 30px;
+    margin: 10px;
+    margin-left: 40px;
+    font-size: 20px;
+}
+#cartas{
+    color: aliceblue;
+    font-size: 20px;
+}
